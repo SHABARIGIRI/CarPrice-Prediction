@@ -1,4 +1,5 @@
- from pywebio.platform.flask import webio_view
+
+from pywebio.platform.flask import webio_view
 from pywebio import STATIC_PATH
 from flask import Flask, send_from_directory
 from pywebio.input import *
@@ -26,8 +27,6 @@ def predict():
     elif (Fuel_Type == 'Diesel'):
         Fuel_Type = 60
 
-    else:
-        Fuel_Type = 2
     Seller_Type = select('Are you a dealer or an individual', ['Dealer', 'Individual'])
     if (Seller_Type == 'Individual'):
         Seller_Type = 106
